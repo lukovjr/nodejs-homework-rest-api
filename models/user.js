@@ -31,7 +31,7 @@ const userSchema = new Schema({
     },
 }, { versionKey: false, timestamps: true });
 
-userSchema.pre("findOneAndUpdate", validateAtUpdate);
+// userSchema.pre("findOneAndUpdate", validateAtUpdate);
 
 userSchema.post("save", handleMongooseError);
 userSchema.post("findOneAndUpdate", handleMongooseError);
